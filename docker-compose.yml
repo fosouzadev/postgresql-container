@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17.0
+    container_name: postgresql-docker-compose
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Abc!1234
+      POSTGRES_DB: testdb
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
