@@ -8,7 +8,7 @@ Possui duas formas abaixo para criar o container.
 ## Estrutura
 Os arquivos da pasta `sql` serão lidos, ordenados pelo nome, e executados no banco de dados.
 
-Toda a estrutura do banco e até alguns dados mais estáticos, podem ser criados apenas adicionando um novo arquivo `sql` no diretório sql. Lembre-se de nomear o arquivo seguindo a sequência numérica.
+Toda a estrutura do banco e até alguns dados mais estáticos, podem ser criados apenas adicionando um novo arquivo `{número}_{nome_arquivo}.sql` no diretório `sql`. Lembre-se de nomear o arquivo seguindo a sequência numérica.
 
 ## Criar container usando docker compose
 ```
