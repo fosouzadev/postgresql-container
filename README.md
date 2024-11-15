@@ -20,3 +20,9 @@ docker-compose up -d
 docker build . -t postgresql-test
 docker run -d --name postgresql-docker-build -p 5432:5432 -v pgdata:/var/lib/postgresql/data postgresql-test
 ```
+
+## Criar imagem usando make
+No fluxo do github actions o arquivo `makefile` é utilizado, para que após adicionar novos scripts ao repositório seja definida também a nova tag da imagem.
+```
+make build
+```

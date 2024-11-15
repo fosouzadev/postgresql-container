@@ -1,0 +1,21 @@
+name: Publish package to github packages
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+      - 'hotfix/**'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Build docker image
+      run: make build
+
+    - name: Publish docker image
+      run: make publish
