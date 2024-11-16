@@ -7,3 +7,4 @@ build:
 
 publish:
 	docker push ghcr.io/fosouzadev/$(IMAGE_NAME):$(TAG)
+	docker push ghcr.io/fosouzadev/$(IMAGE_NAME):latest
