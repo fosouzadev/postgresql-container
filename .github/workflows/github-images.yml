@@ -19,4 +19,4 @@ jobs:
       run: make build DB_PASSWORD=${{ secrets.DB_PASSWORD }} GITHUB_USER=${{ github.actor }}
 
     - name: Publish docker image
-      run: make publish
+      run: make publish GITHUB_USER=${{ github.actor }}
