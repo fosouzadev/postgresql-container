@@ -1,10 +1,10 @@
-IMAGE_NAME=postgresql-container
+IMAGE_NAME=ghcr.io/fosouzadev/postgresql-container
 TAG=1.0
 
 build:
-	docker build . -t ghcr.io/fosouzadev/$(IMAGE_NAME):$(TAG)
-	docker build . -t ghcr.io/fosouzadev/$(IMAGE_NAME):latest
+	docker build --build-arg DB_PASSWORD=$(DB_PASSWORD) . -t $(IMAGE_NAME):$(TAG)
+	docker build --build-arg DB_PASSWORD=$(DB_PASSWORD) . -t $(IMAGE_NAME):latest
 
 publish:
-	docker push ghcr.io/fosouzadev/$(IMAGE_NAME):$(TAG)
-	docker push ghcr.io/fosouzadev/$(IMAGE_NAME):latest
+	docker push $(IMAGE_NAME):$(TAG)
+	docker push $(IMAGE_NAME):latest
