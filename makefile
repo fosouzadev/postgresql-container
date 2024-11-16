@@ -1,4 +1,4 @@
-IMAGE_NAME=ghcr.io/fosouzadev/postgresql-container
+IMAGE_NAME=ghcr.io/$(GITHUB_USER)/postgresql-container
 TAG=1.0
 
 build:

@@ -26,3 +26,9 @@ No fluxo do github actions o arquivo `makefile` é utilizado, para que após adi
 ```
 make build
 ```
+
+## Baixar imagem do Github Packages
+```
+echo {token} | docker login ghcr.io -u {usuário do github} --password-stdin
+docker pull ghcr.io/{usuário do github}/{imagem}:{tag}
+```
