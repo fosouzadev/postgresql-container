@@ -1,6 +1,9 @@
 # PostgreSQL
 Esse repositório permite criar um banco postgreSQL em container, já com uma estrutura e dados definidos anteriormente.
 
+Possui um fluxo no github actions que publica a imagem no github packages.
+[![Publish package to github packages](https://github.com/fosouzadev/postgresql-container/actions/workflows/github-images.yml/badge.svg)](https://github.com/fosouzadev/postgresql-container/actions/workflows/github-images.yml)
+
 Possui duas formas abaixo para criar o container. 
 * Docker Compose
 * Docker Build
@@ -24,7 +27,7 @@ docker run -d --name postgresql-docker-build -p 5432:5432 -v pgdata:/var/lib/pos
 ## Criar imagem usando make
 No fluxo do github actions o arquivo `makefile` é utilizado, para que após adicionar novos scripts ao repositório seja definida também a nova tag da imagem.
 ```
-make build
+make build DB_PASSWORD={senha} GITHUB_USER={usuário do github}
 ```
 
 ## Baixar imagem do Github Packages
